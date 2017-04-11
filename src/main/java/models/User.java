@@ -1,9 +1,12 @@
 package models;
 
+import java.util.Date;
+
 public class User {
 	private String name;
 	private String password;
-	private String admission_date;
+	private Date admission_date;
+	
 	public String getName() {
 		return name;
 	}
@@ -16,10 +19,10 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getAdmission_date() {
+	public Date getAdmission_date() {
 		return admission_date;
 	}
-	public void setAdmission_date(String admission_date) {
+	public void setAdmission_date(Date admission_date) {
 		this.admission_date = admission_date;
 	}
 }
