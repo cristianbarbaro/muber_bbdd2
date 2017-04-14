@@ -23,4 +23,12 @@ public class Driver extends User {
 	public void setTravels(ArrayList<Travel> travels) {
 		this.travels = travels;
 	}
+	
+	public ArrayList<Qualification> getQualifications() {
+		return qualifications;
+	}
+
+	public void setQualifications(ArrayList<Qualification> qualifications) {
+		this.qualifications = qualifications;
+	}
 }

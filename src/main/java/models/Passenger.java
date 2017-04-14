@@ -13,4 +13,12 @@ public class Passenger extends User {
 	public void setTotal_credit(float total_credit) {
 		this.total_credit = total_credit;
 	}
+
+	public ArrayList<Travel> getTravels() {
+		return travels;
+	}
+
+	public void setTravels(ArrayList<Travel> travels) {
+		this.travels = travels;
+	}
 }
