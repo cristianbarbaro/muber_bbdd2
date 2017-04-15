@@ -15,6 +15,10 @@ public abstract class User {
 		this.setAdmissionDate(new Date()); 
 	}
 	
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getIdUser() {
 		return idUser;
 	}

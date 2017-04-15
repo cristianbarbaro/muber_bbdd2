@@ -11,6 +11,9 @@ public class Driver extends User {
 	private List<Travel> travels;
 	private List<Qualification> qualifications;
 	
+	public Driver(){
+	}
+	
 	public Driver(String username, String password, Date licenceExpiration) {
 		super(username, password);
 		this.travels = new ArrayList<Travel>();

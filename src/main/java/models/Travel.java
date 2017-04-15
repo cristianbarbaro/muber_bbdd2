@@ -16,6 +16,9 @@ public class Travel {
 	private List<Passenger> passengers;
 	private Driver driver;
 	
+	public Travel(){
+	}
+	
 	public Travel(Driver driver, String origin, String destiny, int maxPassengers, float totalCost) {
 		super();
 		this.driver = driver;

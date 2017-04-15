@@ -7,6 +7,9 @@ public class Qualification {
 	private Passenger passenger;
 	private Travel travel;
 	
+	public Qualification(){
+	}
+	
 	public Qualification(int points, String comment, Passenger passenger, Travel travel) {
 		super();
 		this.points = points;

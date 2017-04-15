@@ -8,6 +8,10 @@ public class Passenger extends User {
 	private float totalCredit;
 	private List<Travel> travels;
 	
+	public Passenger(){
+		super();
+	}
+	
 	public Passenger(String username, String password, float totalCredit) {
 		super(username, password);
 		this.totalCredit = totalCredit;
