@@ -15,10 +15,10 @@
             <column name="COMMENT" />
         </property>
         <many-to-one name="passenger" class="models.Passenger" unique="true" fetch="join">
-            <column name="PASSENGER" />
+            <column name="IDPASSENGER" />
         </many-to-one>
         <many-to-one name="travel" class="models.Travel" unique="true" fetch="join">
-            <column name="TRAVEL" />
+            <column name="IDTRAVEL" />
         </many-to-one>
     </class>
 </hibernate-mapping>
