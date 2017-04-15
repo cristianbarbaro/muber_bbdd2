@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/04/2017 23:51:25 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="models.User" table="USER" abstract="true">
+        <id name="idUser" type="java.lang.Long">
+            <column name="IDUSER" />
+            <generator class="native" />
+        </id>
+        <discriminator type="string">
+            <column name="DISCR_COL" />
+        </discriminator>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="admissionDate" type="java.util.Date">
+            <column name="ADMISSIONDATE" />
+        </property>
+    </class>
+</hibernate-mapping>

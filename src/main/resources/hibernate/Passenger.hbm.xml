@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/04/2017 23:51:25 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <subclass name="models.Passenger" extends="models.User" discriminator-value="Passenger" lazy="false">
+        <property name="idPassenger" type="java.lang.Long">
+            <column name="IDPASSENGER" />
+        </property>
+        <list name="travels" inverse="false" table="TRAVEL" lazy="true">
+            <key>
+                <column name="IDPASSENGER" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="models.Travel" />
+        </list>
+        <property name="totalCredit" type="float">
+            <column name="TOTALCREDIT" />
+        </property>
+    </subclass>
+</hibernate-mapping>

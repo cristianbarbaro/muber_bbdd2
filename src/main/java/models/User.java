@@ -2,27 +2,48 @@ package models;
 
 import java.util.Date;
 
-public class User {
-	private String name;
+public abstract class User {
+	private Long idUser;
+	private String username;
 	private String password;
-	private Date admission_date;
+	private Date admissionDate;
 	
-	public String getName() {
-		return name;
+	public User(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.setAdmissionDate(new Date()); 
 	}
-	public void setName(String name) {
-		this.name = name;
+	
+	public Long getIdUser() {
+		return idUser;
 	}
+	
+	public void setIdUser(Long idUser) {
+		this.idUser = idUser;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	public String getPassword() {
 		return password;
 	}
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Date getAdmission_date() {
-		return admission_date;
+
+	public Date getAdmissionDate() {
+		return admissionDate;
 	}
-	public void setAdmission_date(Date admission_date) {
-		this.admission_date = admission_date;
+
+	public void setAdmissionDate(Date admissionDate) {
+		this.admissionDate = admissionDate;
 	}
 }

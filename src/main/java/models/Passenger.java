@@ -1,24 +1,56 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Passenger extends User {
-	private float total_credit;
-	private ArrayList<Travel> travels;
-
-	public float getTotal_credit() {
-		return total_credit;
+	private Long idPassenger;
+	private float totalCredit;
+	private List<Travel> travels;
+	
+	public Passenger(String username, String password, float totalCredit) {
+		super(username, password);
+		this.totalCredit = totalCredit;
+		this.travels = new ArrayList<Travel>();
 	}
 
-	public void setTotal_credit(float total_credit) {
-		this.total_credit = total_credit;
+	public boolean addTravel(Travel travel) {
+		if (travel.addPassenger(this)) {
+			this.travels.add(travel);
+			return true;
+		}
+		return false;
 	}
 
-	public ArrayList<Travel> getTravels() {
+	public Qualification qualify(Travel travel, int points, String comment) {
+		return new Qualification(points, comment, this, travel);
+	}
+
+	public void charge(float cost) {
+		this.totalCredit -= cost;
+	}
+
+	public Long getIdPassenger() {
+		return idPassenger;
+	}
+
+	public void setIdPassenger(Long idPassenger) {
+		this.idPassenger = idPassenger;
+	}
+
+	public List<Travel> getTravels() {
 		return travels;
 	}
 
-	public void setTravels(ArrayList<Travel> travels) {
+	public void setTravels(List<Travel> travels) {
 		this.travels = travels;
+	}
+
+	public float getTotalCredit() {
+		return totalCredit;
+	}
+
+	public void setTotalCredit(float totalCredit) {
+		this.totalCredit = totalCredit;
 	}
 }

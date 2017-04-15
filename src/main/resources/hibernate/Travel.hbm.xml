@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/04/2017 23:51:25 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="models.Travel" table="TRAVEL">
+        <id name="idTravel" type="java.lang.Long">
+            <column name="IDTRAVEL" />
+            <generator class="native" />
+        </id>
+        <property name="destiny" type="java.lang.String">
+            <column name="DESTINY" />
+        </property>
+        <property name="origin" type="java.lang.String">
+            <column name="ORIGIN" />
+        </property>
+        <property name="totalCost" type="float">
+            <column name="TOTALCOST" />
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="DATE" />
+        </property>
+        <property name="maxPassengers" type="int">
+            <column name="MAXPASSENGERS" />
+        </property>
+        <property name="finalized" type="boolean">
+            <column name="FINALIZED" />
+        </property>
+        <list name="passengers" inverse="false" table="PASSENGER" lazy="true">
+            <key>
+                <column name="IDTRAVEL" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="models.Passenger" />
+        </list>
+        <many-to-one name="driver" class="models.Driver" fetch="join">
+            <column name="DRIVER" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

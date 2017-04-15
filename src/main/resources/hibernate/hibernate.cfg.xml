@@ -18,9 +18,17 @@
 
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
+		
+		<property name="hibernate.hbm2ddl.auto">create</property>
 
 		<!-- Incluir mappings aquí -->
 		<!-- <mapping resource="hibernate/clase.hbm.xml" /> -->
+		<mapping resource="hibernate/Muber.hbm.xml" />
+		<mapping resource="hibernate/User.hbm.xml" />
+		<mapping resource="hibernate/Driver.hbm.xml" />
+		<mapping resource="hibernate/Passenger.hbm.xml" />
+		<mapping resource="hibernate/Travel.hbm.xml" />
+		<mapping resource="hibernate/Qualification.hbm.xml" />
 
 	</session-factory>
 </hibernate-configuration>
