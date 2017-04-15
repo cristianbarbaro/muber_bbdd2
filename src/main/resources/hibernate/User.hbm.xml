@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 14/04/2017 23:51:25 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="models.User" table="USER" abstract="true">
+    <class name="models.User" table="USER_MUBER" abstract="true">
         <id name="idUser" type="java.lang.Long">
             <column name="IDUSER" />
             <generator class="native" />

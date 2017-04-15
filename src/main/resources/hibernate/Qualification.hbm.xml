@@ -14,10 +14,10 @@
         <property name="comment" type="java.lang.String">
             <column name="COMMENT" />
         </property>
-        <many-to-one name="passenger" class="models.Passenger" fetch="join">
+        <many-to-one name="passenger" class="models.Passenger" unique="true" fetch="join">
             <column name="PASSENGER" />
         </many-to-one>
-        <many-to-one name="travel" class="models.Travel" fetch="join">
+        <many-to-one name="travel" class="models.Travel" unique="true" fetch="join">
             <column name="TRAVEL" />
         </many-to-one>
     </class>

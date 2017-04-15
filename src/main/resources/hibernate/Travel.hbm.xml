@@ -26,15 +26,14 @@
         <property name="finalized" type="boolean">
             <column name="FINALIZED" />
         </property>
-        <list name="passengers" inverse="false" table="PASSENGER" lazy="true">
-            <key>
-                <column name="IDTRAVEL" />
-            </key>
+        <list name="passengers" table="TRAVEL_PASSENGER" lazy="true">
+            <key column="IDTRAVEL" />
             <list-index></list-index>
-            <one-to-many class="models.Passenger" />
+            <many-to-many column="IDPASSENGER" 
+            	class="models.Passenger" />
         </list>
         <many-to-one name="driver" class="models.Driver" fetch="join">
-            <column name="DRIVER" />
+            <column name="IDDRIVER" />
         </many-to-one>
     </class>
 </hibernate-mapping>

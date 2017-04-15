@@ -7,12 +7,11 @@
         <property name="idPassenger" type="java.lang.Long">
             <column name="IDPASSENGER" />
         </property>
-        <list name="travels" inverse="false" table="TRAVEL" lazy="true">
-            <key>
-                <column name="IDPASSENGER" />
-            </key>
+        <list name="travels" inverse="true" table="TRAVEL_PASSENGER" lazy="true">
+            <key column="IDPASSENGER" />
             <list-index></list-index>
-            <one-to-many class="models.Travel" />
+            <many-to-many column="IDTRAVEL" 
+            	class="models.Travel" />
         </list>
         <property name="totalCredit" type="float">
             <column name="TOTALCREDIT" />
