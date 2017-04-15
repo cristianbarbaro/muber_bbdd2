@@ -51,7 +51,7 @@ public class Muber {
 		return idMuber;
 	}
 	
-	public void setIdMuber(Long idMuber) {
+	private void setIdMuber(Long idMuber) {
 		this.idMuber = idMuber;
 	}
 	

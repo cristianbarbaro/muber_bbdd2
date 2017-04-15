@@ -19,7 +19,7 @@ public abstract class User {
 		return idUser;
 	}
 	
-	public void setIdUser(Long idUser) {
+	private void setIdUser(Long idUser) {
 		this.idUser = idUser;
 	}
 

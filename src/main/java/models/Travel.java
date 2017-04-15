@@ -46,7 +46,7 @@ public class Travel {
 		return idTravel;
 	}
 	
-	public void setIdTravel(Long idTravel) {
+	private void setIdTravel(Long idTravel) {
 		this.idTravel = idTravel;
 	}
 	

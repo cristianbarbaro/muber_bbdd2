@@ -42,7 +42,7 @@ public class Driver extends User {
 		return idDriver;
 	}
 
-	public void setIdDriver(Long idDriver) {
+	private void setIdDriver(Long idDriver) {
 		this.idDriver = idDriver;
 	}
 

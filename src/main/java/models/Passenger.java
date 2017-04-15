@@ -34,7 +34,7 @@ public class Passenger extends User {
 		return idPassenger;
 	}
 
-	public void setIdPassenger(Long idPassenger) {
+	private void setIdPassenger(Long idPassenger) {
 		this.idPassenger = idPassenger;
 	}
 

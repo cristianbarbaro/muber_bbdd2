@@ -20,7 +20,7 @@ public class Qualification {
 		return idQualification;
 	}
 	
-	public void setIdQualification(Long idQualification) {
+	private void setIdQualification(Long idQualification) {
 		this.idQualification = idQualification;
 	}
 	
