@@ -57,6 +57,7 @@ public class App {
 		viaje.finalize();
 
 		System.out.println("Guardando...");
+		/*
 		session.save(roberto);
 		session.save(viaje);
 		session.save(german);
@@ -65,6 +66,7 @@ public class App {
 		session.save(q1);
 		session.save(q2);
 		session.save(q3);
+		*/
 		session.save(muber);
 		
 		System.out.println("Cerrando transacción...");
@@ -72,7 +74,7 @@ public class App {
 		session.flush();
 		session.close();
 		sf.close();
-		System.out.println("Termiado.");
+		System.out.println("Terminado.");
 	}
 
 }
